@@ -21,3 +21,11 @@ def login(days):
 def logout():
     r.authentication.logout()
 
+#get stocks
+def get_stocks():
+    stocks = list()
+    stocks.append('TSLA')
+    stocks.append('ARKK')
+    stocks.append('ARKF')
+    return(stocks)
+
