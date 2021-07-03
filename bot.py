@@ -44,4 +44,18 @@ def open_market():
     
     return(market)
 
-open_market()
+if __name__ == '__main__':
+    login(days = 1)
+
+    stocks = get_stocks()
+    print('Stocks:', stocks)
+
+    while open_market():
+        prices = r.stocks.get_latest_price(stocks)
+
+        for i, stock in enumerate(stocks):
+            price = float(prices[i])
+
+        print('{} = ${}'.format(stock, price))
+
+        time.sleep(30)
