@@ -3,7 +3,7 @@ import config
 import robin_stocks as r # API
 
 import datetime as dt
-import time as t
+import time
 
 #login
 def login(days):
@@ -40,8 +40,8 @@ def open_market():
     if time_now > market_open and time_now < market_close:
         market = True
     else:
-        print('### market is closed')
+        print('Market is closed')
     
     return(market)
 
-
+open_market()
